@@ -138,7 +138,11 @@ locals {
   }
 
   # Discover all frontend files in root, css/, and js/
-  website_files = fileset("${path.module}/..", "{index.html,css/*,js/*}")
+  website_files = setunion(
+    fileset("${path.module}/..", "index.html"),
+    fileset("${path.module}/..", "css/**"),
+    fileset("${path.module}/..", "js/**")
+  )
 }
 
 resource "aws_s3_object" "site_assets" {
