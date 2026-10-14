@@ -1,0 +1,8 @@
+# AWS Region (ap-south-1 Mumbai is best for Maharashtra & India)
+aws_region   = "ap-south-1"
+
+# Project identification prefix
+project_name = "krushimitra-agro"
+
+# Environment
+environment  = "production"

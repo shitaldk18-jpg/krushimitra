@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krushimitra Agro (कृषिमित्र ॲग्रो) | Bansarola, Kaij, Beed | Tractor Operated Implements & Agro Equipment</title>
+    <meta name="description" content="कृषिमित्र ॲग्रो, बंसारोळा, ता. केज, जि. बीड. सर्व प्रकारची आधुनिक ट्रॅक्टर चलित शेती अवजारे, रोटाव्हेटर, पलटी नांगर, पेरणी यंत्रे, स्प्रेअर पंप व महाडीबीटी शासकीय अनुदान कोटेशन उपलब्ध. संपर्क: 9545169002">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================================= -->
+    <!-- TOP CORPORATE UTILITY STRIP -->
+    <!-- ============================================================= -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>बंसारोळा, ता. केज, जि. बीड, महाराष्ट्र - ४३१५१८</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:9545169002" style="font-weight: 800; color: #ffffff;">हेल्पलाईन: ९५४५१६९००२ (9545169002)</a>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>सकाळी ८:०० ते रात्री ८:३० (रविवार चालू)</span>
+                </div>
+            </div>
+            <div class="top-bar-promo">
+                <i class="fa-solid fa-certificate" style="color: #fbbf24;"></i>
+                <span>महाडीबीटी (MahaDBT) ५०% शासकीय अवजारे अनुदान अधिकृत कोटेशन उपलब्ध!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- MAIN NAVBAR (CORPORATE BRANDING) -->
+    <!-- ============================================================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo-wrapper">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="brand-main-name">कृषिमित्र ॲग्रो</div>
+                    <div class="brand-sub-badge">
+                        <span class="brand-sub-en">KRUSHIMITRA AGRO</span>
+                        <span class="brand-location-pill">
+                            <i class="fa-solid fa-location-dot"></i> बंसारोळा, ता. केज
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">मुख्य पान</a></li>
+                <li><a href="#categories" class="nav-link">अवजारे श्रेणी</a></li>
+                <li><a href="#tractor-guide" class="nav-link">ट्रॅक्टर मॅचिंग गाईड</a></li>
+                <li><a href="#catalog" class="nav-link">कॅटलॉग व किंमती</a></li>
+                <li><a href="#subsidy" class="nav-link">महाडीबीटी अनुदान</a></li>
+                <li><a href="#strengths" class="nav-link">गुणवत्ता हमी</a></li>
+                <li><a href="#contact" class="nav-link">पत्ता व संपर्क</a></li>
+            </ul>
+
+            <!-- Nav Actions (Quote, Cart & Direct Contact) -->
+            <div class="nav-actions">
+                <a href="#quick-quote" class="btn btn-amber btn-sm" title="कोटेशनसाठी अर्ज करा">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> कोटेशन मिळवा
+                </a>
+                <a href="https://wa.me/919545169002?text=नमस्कार%20कृषिमित्र%20ॲग्रो%20बंसारोळा,%20मला%20शेती%20अवजारांविषयी%20माहिती%20व%20कोटेशन%20हवे%20आहे." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" title="WhatsApp वर थेट संपर्क करा">
+                    <i class="fa-brands fa-whatsapp"></i> ९५४५१६९००२
+                </a>
+                <button class="cart-btn" id="cart-btn" title="निवडलेली अवजारे / कोटेशन बास्केट पहा">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" title="मेनू उघडा">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu-drawer" id="mobile-drawer">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border-color);">
+            <div class="logo-text">
+                <h3 style="font-size: 1.5rem; color: #0b1a30; font-weight: 900;">कृषिमित्र ॲग्रो</h3>
+                <p style="font-size: 0.8rem; color: var(--primary); font-weight: 700;">बंसारोळा, ता. केज, जि. बीड</p>
+            </div>
+            <button class="close-btn" id="close-mobile-drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link"><i class="fa-solid fa-house" style="color: var(--primary);"></i> मुख्य पान</a></li>
+            <li><a href="#categories" class="mobile-nav-link"><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> अवजारे श्रेणी</a></li>
+            <li><a href="#tractor-guide" class="mobile-nav-link"><i class="fa-solid fa-tractor" style="color: var(--primary);"></i> ट्रॅक्टर मॅचिंग गाईड</a></li>
+            <li><a href="#catalog" class="mobile-nav-link"><i class="fa-solid fa-list-check" style="color: var(--primary);"></i> सर्व अवजारे कॅटलॉग</a></li>
+            <li><a href="#subsidy" class="mobile-nav-link"><i class="fa-solid fa-certificate" style="color: var(--primary);"></i> महाडीबीटी ५०% अनुदान</a></li>
+            <li><a href="#strengths" class="mobile-nav-link"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> आमची गुणवत्ता वैशिष्ट्ये</a></li>
+            <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i> दुकानाचा पत्ता व संपर्क</a></li>
+        </ul>
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+            <a href="tel:9545169002" class="btn btn-primary" style="width: 100%; font-weight: 800;">
+                <i class="fa-solid fa-phone"></i> कॉल: ९५४५१६९००२
+            </a>
+            <a href="https://wa.me/919545169002" target="_blank" class="btn btn-whatsapp" style="text-align: center; font-weight: 800;">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp वर संपर्क करा
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ============================================================= -->
+        <!-- HERO SECTION (CHAMPION IMPLEMENTS STYLE SHOWCASE) -->
+        <!-- ============================================================= -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container-grid">
+                <div class="hero-content">
+                    <div class="hero-herald-badge">
+                        <i class="fa-solid fa-award" style="color: #f59e0b;"></i>
+                        <span>बीड व मराठवाड्यातील अग्रगण्य अधिकृत कृषी अवजारे केंद्र</span>
+                    </div>
+
+                    <h1 class="hero-company-name-hero">
+                        कृषिमित्र ॲग्रो
+                        <span>KRUSHIMITRA AGRO BANSAROLA</span>
+                    </h1>
+
+                    <div class="hero-company-sub">
+                        <span style="background: #f59e0b; color: #0b1a30; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 1.05rem;">
+                            <i class="fa-solid fa-location-dot"></i> बंसारोळा, ता. केज, जि. बीड
+                        </span>
+                        <span style="color: #86efac; font-size: 1.15rem; font-weight: 700;">• ट्रॅक्टर चलित अवजारे व स्पेअर्स</span>
+                    </div>
+
+                    <h2 class="hero-subheading">
+                        दर्जेदार ट्रॅक्टर चलित अवजारे, अधिकृत GST कोटेशन आणि थेट शेतावर डिलिव्हरी!
+                    </h2>
+
+                    <p class="hero-description">
+                        शक्तिमान रोटाव्हेटर, हायड्रॉलिक रिव्हर्सिबल पलटी नांगर, ऑटोमॅटिक पेरणी यंत्रे, कल्टिव्हेटर, ट्रॅक्टर स्प्रेअर व मळणी यंत्रे रास्त भावात व <strong>महाडीबीटी (MahaDBT) ५०% शासकीय अनुदानासह</strong> अधिकृत कोटेशनसह उपलब्ध.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#catalog" class="btn btn-primary" style="padding: 14px 28px; font-size: 1.05rem; font-weight: 800;">
+                            <i class="fa-solid fa-tractor"></i> अवजारे कॅटलॉग पहा
+                        </a>
+                        <a href="https://wa.me/919545169002?text=नमस्कार%20कृषिमित्र%20ॲग्रो%20बंसारोळा,%20मला%20शेती%20अवजारांचे%20अधिकृत%20कोटेशन%20हवे%20आहे." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 14px 26px; font-size: 1.02rem;">
+                            <i class="fa-brands fa-whatsapp"></i> व्हॉट्सॲप: ९५४५१६९००२
+                        </a>
+                        <a href="tel:9545169002" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.15); border: 1.5px solid rgba(255, 255, 255, 0.35); padding: 14px 22px;">
+                            <i class="fa-solid fa-phone"></i> थेट कॉल करा
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>प्रमाणित हेवी ड्युटी स्टील अवजारे</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 style="color: #fef08a;">50%</h3>
+                            <p>महाडीबीटी शासकीय अनुदान सहाय्य</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>२५००+</h3>
+                            <p>समाधानी शेतकरी (बीड व मराठवाडा)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Machinery Showcase Card (Right Column) -->
+                <div class="hero-machinery-card">
+                    <div class="machinery-card-media">
+                        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80" alt="Shaktiman Rotavator Krushimitra Agro Bansarola">
+                        <div class="machinery-floating-badge">
+                            <i class="fa-solid fa-certificate" style="color: #fbbf24;"></i> MahaDBT Approved & Tested
+                        </div>
+                    </div>
+                    <div class="machinery-card-content">
+                        <h4 class="machinery-card-title">Shaktiman 7 Feet Heavy Duty Rotavator</h4>
+                        <p class="machinery-card-sub">शक्तिमान ७ फूट मल्टि-स्पीड रोटाव्हेटर</p>
+                        
+                        <div class="machinery-specs-mini">
+                            <div class="mini-spec-item">
+                                <span class="mini-spec-label">ट्रॅक्टर क्षमता</span>
+                                <span class="mini-spec-value">45 - 55 HP</span>
+                            </div>
+                            <div class="mini-spec-item">
+                                <span class="mini-spec-label">ब्लेड टाईप</span>
+                                <span class="mini-spec-value">५४ L-Type बोरोन स्टील</span>
+                            </div>
+                            <div class="mini-spec-item">
+                                <span class="mini-spec-label">गिअरबॉक्स</span>
+                                <span class="mini-spec-value">Multi-Speed (4 Gear)</span>
+                            </div>
+                            <div class="mini-spec-item">
+                                <span class="mini-spec-label">वॉरंटी</span>
+                                <span class="mini-spec-value">२ वर्षे अधिकृत वॉरंटी</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://wa.me/919545169002?text=मला%20शक्तिमान%20७%20फूट%20रोटाव्हेटरबद्दल%20माहिती%20व%20कोटेशन%20हवे%20आहे." target="_blank" class="btn btn-whatsapp btn-sm" style="flex-grow: 1;">
+                                <i class="fa-brands fa-whatsapp"></i> चौकशी करा
+                            </a>
+                            <a href="#catalog" class="btn btn-outline btn-sm" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">
+                                सर्व अवजारे पहा
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- TRUST STRIP / DEALERSHIP HIGHLIGHTS -->
+        <!-- ============================================================= -->
+        <section class="trust-strip">
+            <div class="container">
+                <div class="trust-strip-grid">
+                    <div class="trust-strip-item">
+                        <div class="trust-icon"><i class="fa-solid fa-tractor"></i></div>
+                        <div class="trust-text">
+                            <h4>सर्व ट्रॅक्टर सुसंगत</h4>
+                            <p>३० ते ६० HP साठी प्रमाणित अवजारे</p>
+                        </div>
+                    </div>
+                    <div class="trust-strip-item">
+                        <div class="trust-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <div class="trust-text">
+                            <h4>महाडीबीटी ५०% अनुदान</h4>
+                            <p>अधिकृत GST कोटेशन व बिल तात्काळ</p>
+                        </div>
+                    </div>
+                    <div class="trust-strip-item">
+                        <div class="trust-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div class="trust-text">
+                            <h4>अस्सल सुटे भाग व सर्व्हिस</h4>
+                            <p>बंसारोळा येथे मोफत सर्व्हिसिंग व स्पेअर्स</p>
+                        </div>
+                    </div>
+                    <div class="trust-strip-item">
+                        <div class="trust-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <div class="trust-text">
+                            <h4>शेतावर थेट डिलिव्हरी</h4>
+                            <p>केज, बीड, अंबाजोगाई व परिसरात पोहोच</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- PRODUCT CATEGORIES SHOWCASE GRID (CHAMPION IMPLEMENTS FORMAT) -->
+        <!-- ============================================================= -->
+        <section class="categories-showcase-section" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> अवजारे श्रेणी</span>
+                    <h2 class="section-title">ट्रॅक्टर चलित अवजारे प्रमुख वर्ग</h2>
+                    <p class="section-description">
+                        जमिनीच्या मशागतीपासून ते काढणीपर्यंत सर्व आधुनिक ट्रॅक्टर अवजारे कृषिमित्र ॲग्रो, बंसारोळा येथे एकाच छताखाली उपलब्ध आहेत.
+                    </p>
+                </div>
+
+                <div class="categories-grid" id="categories-showcase-container">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- TRACTOR HP COMPATIBILITY FINDER (NEW CHAMPION FEATURE) -->
+        <!-- ============================================================= -->
+        <section class="compatibility-section" id="tractor-guide">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-screwdriver-wrench"></i> ट्रॅक्टर मॅचिंग गाईड</span>
+                    <h2 class="section-title">तुमच्या ट्रॅक्टरसाठी योग्य अवजारे निवडा</h2>
+                    <p class="section-description">
+                        आपल्या ट्रॅक्टरच्या अश्वशक्तीनुसार (HP) योग्य अवजार निवडल्यास डिझेलची बचत होते आणि ट्रॅक्टरवर अतिरिक्त लोड येत नाही.
+                    </p>
+                </div>
+
+                <div class="tractor-tabs-container">
+                    <div class="tractor-hp-buttons" id="tractor-hp-nav">
+                        <!-- Populated by app.js -->
+                    </div>
+
+                    <div id="tractor-compat-display">
+                        <!-- Display populated by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- MAIN EQUIPMENT CATALOG SECTION -->
+        <!-- ============================================================= -->
+        <section class="catalog-section" id="catalog">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-tractor"></i> कृषिमित्र ॲग्रो प्रॉडक्ट्स</span>
+                    <h2 class="section-title">सर्व ट्रॅक्टर शेती अवजारे कॅटलॉग</h2>
+                    <p class="section-description">
+                        अवजारांचे तांत्रिक तपशील तपासा, महाडीबीटी शासकीय अनुदानाची खात्री करा आणि एका क्लिकवर थेट बुकिंग किंवा कोटेशन मिळवा.
+                    </p>
+                </div>
+
+                <!-- Controls (Search, Filters, Categories) -->
+                <div class="catalog-controls">
+                    <div class="catalog-search-row">
+                        <div class="search-input-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-food" class="catalog-search-input" placeholder="अवजार शोधा: रोटाव्हेटर, नांगर, पेरणी यंत्र, स्प्रेअर, थ्रेशर, HP...">
+                        </div>
+
+                        <div class="filter-btn-group">
+                            <button class="filter-pill active" data-filter="all">
+                                <i class="fa-solid fa-tractor"></i> सर्व अवजारे
+                            </button>
+                            <button class="filter-pill" data-filter="subsidy">
+                                <i class="fa-solid fa-certificate" style="color: #0284c7;"></i> महाडीबीटी अनुदान पात्र
+                            </button>
+                            <button class="filter-pill" data-filter="in_stock">
+                                <i class="fa-solid fa-check" style="color: #16a34a;"></i> तात्काळ उपलब्ध स्टॉक
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category Bar -->
+                    <div class="category-tabs-bar" id="category-tabs">
+                        <!-- Populated dynamically via app.js -->
+                    </div>
+                </div>
+
+                <!-- Equipment Cards Grid -->
+                <div class="equipment-grid" id="food-grid">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- MAHADBT SUBSIDY PROCESS SECTION -->
+        <!-- ============================================================= -->
+        <section class="subsidy-section" id="subsidy">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-file-invoice"></i> शासकीय योजना व अनुदान</span>
+                    <h2 class="section-title">महाडीबीटी (MahaDBT) शेती अवजारे ५०% अनुदान प्रक्रिया</h2>
+                    <p class="section-description">
+                        महाराष्ट्र शासनाच्या कृषी यांत्रिकीकरण अभियानांतर्गत अवजारांवर ४०% ते ५०% पर्यंत थेट बँक खात्यात अनुदान मिळते.
+                    </p>
+                </div>
+
+                <div class="subsidy-process-grid">
+                    <div class="subsidy-step-card">
+                        <div class="step-num-badge">१</div>
+                        <h4>महाडीबीटी नोंदणी</h4>
+                        <p>mahadbt.maharashtra.gov.in पोर्टलवर शेतकरी लॉगिन करून अवजारासाठी अर्ज सादर करा.</p>
+                    </div>
+                    <div class="subsidy-step-card">
+                        <div class="step-num-badge">२</div>
+                        <h4>अधिकृत GST कोटेशन</h4>
+                        <p>लॉटरीमध्ये नाव आल्यास कृषिमित्र ॲग्रो, बंसारोळा कडून अधिकृत GST कोटेशन व टेस्ट रिपोर्ट मिळवा.</p>
+                    </div>
+                    <div class="subsidy-step-card">
+                        <div class="step-num-badge">३</div>
+                        <h4>पूर्वसंमती व खरेदी</h4>
+                        <p>कृषी विभागाकडून पूर्वसंमती (Pre-Sanction) मिळाल्यावर बंसारोळा केंद्रावरून अवजाराची खरेदी व डिलिव्हरी घ्या.</p>
+                    </div>
+                    <div class="subsidy-step-card">
+                        <div class="step-num-badge">४</div>
+                        <h4>अनुदान थेट खात्यात जमा</h4>
+                        <p>खरेदी पावती व अवजाराचे फोटो अपलोड केल्यानंतर ५०% शासकीय अनुदान थेट आपल्या बँक खात्यात जमा होते.</p>
+                    </div>
+                </div>
+
+                <div class="subsidy-details-box">
+                    <div>
+                        <h3 style="font-size: 1.5rem; color: #0b1a30; font-weight: 800; margin-bottom: 8px;">
+                            अनुदान कोटेशनसाठी आवश्यक कागदपत्रे:
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            कृषिमित्र ॲग्रो, बंसारोळा मार्फत महाडीबीटी पोर्टलवर कोटेशन आणि टेस्ट रिपोर्ट अपलोड करण्यासाठी खालील कागदपत्रांची आवश्यकता असते:
+                        </p>
+                        <ul class="docs-checklist">
+                            <li><i class="fa-solid fa-circle-check"></i> ७/१२ उतारा व ८-अ उतारा</li>
+                            <li><i class="fa-solid fa-circle-check"></i> आधार कार्ड व बँक पासबुक झेरॉक्स</li>
+                            <li><i class="fa-solid fa-circle-check"></i> ट्रॅक्टरचे आरसी बुक (RC Book)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> मोबाईल नंबर (आधार लिंक असलेला)</li>
+                        </ul>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px; background: #ffffff; padding: 22px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <h4 style="color: #0b1a30; font-weight: 800; font-size: 1.1rem;">तात्काळ कोटेशन हवे आहे का?</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                            आमच्या बंसारोळा कार्यालयातून ५ मिनिटांत अधिकृत GST कोटेशन तयार करून दिले जाते.
+                        </p>
+                        <a href="https://wa.me/919545169002?text=मला%20महाडीबीटी%20अनुदानासाठी%20अवजाराचे%20अधिकृत%20कोटेशन%20हवे%20आहे." target="_blank" class="btn btn-whatsapp" style="text-align: center;">
+                            <i class="fa-brands fa-whatsapp"></i> व्हॉट्सॲपवर कोटेशन मागा
+                        </a>
+                        <a href="tel:9545169002" class="btn btn-secondary" style="text-align: center;">
+                            <i class="fa-solid fa-phone"></i> फोन: ९५४५१६९००२
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- ENGINEERING QUALITY & WHY KRUSHIMITRA AGRO (CHAMPION STANDARD) -->
+        <!-- ============================================================= -->
+        <section class="strengths-section" id="strengths">
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="section-header">
+                    <span class="section-subtitle" style="background: rgba(21, 128, 61, 0.3); color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">
+                        <i class="fa-solid fa-shield-halved"></i> आमची बलस्थाने
+                    </span>
+                    <h2 class="section-title" style="color: #ffffff;">कृषिमित्र ॲग्रो का निवडावे?</h2>
+                    <p class="section-description" style="color: #94a3b8;">
+                        स्थानिक जमीन, काळी भारी माती आणि शेतकऱ्यांची गरज ओळखून आम्ही केवळ सर्वोत्तम दर्जाची आणि दीर्घकाळ टिकणारी अवजारे देतो.
+                    </p>
+                </div>
+
+                <div class="strengths-grid">
+                    <div class="strength-card">
+                        <div class="strength-icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <h4>बोरोन स्टील तंत्रज्ञान</h4>
+                        <p>उच्च दर्जाचे बोरोन स्टील ब्लेड्स व टायन्समुळे अवजारे खडकाळ जमिनीतही झिजत नाहीत व दीर्घकाळ टिकतात.</p>
+                    </div>
+
+                    <div class="strength-card">
+                        <div class="strength-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h4>हेवी ड्युटी गिअरबॉक्स</h4>
+                        <p>रोटाव्हेटर व थ्रेशरसाठी सीएनसी मशिनिंगने तयार केलेले आयातित बेअरिंग्सयुक्त ऑईल-बाथ गिअरबॉक्सेस.</p>
+                    </div>
+
+                    <div class="strength-card">
+                        <div class="strength-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <h4>अधिकृत टेस्ट रिपोर्ट</h4>
+                        <p>सर्व अवजारे अधिकृत कृषी विद्यापीठ व मानक संस्थांकडून प्रमाणित असून महाडीबीटी अनुदानासाठी १००% पात्र आहेत.</p>
+                    </div>
+
+                    <div class="strength-card">
+                        <div class="strength-icon"><i class="fa-solid fa-wrench"></i></div>
+                        <h4>बंसारोळा येथे स्पेअर्स</h4>
+                        <p>प्रत्येक अवजाराचे मूळ स्पेअर पार्टस, ब्लेड्स, नट-बोल्ट आणि प्रशिक्षित मेकॅनिक बंसारोळा दालनात सदैव उपलब्ध.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- INSTANT QUOTATION REQUEST FORM (CHAMPION LEAD GENERATOR) -->
+        <!-- ============================================================= -->
+        <section class="lead-form-section" id="quick-quote">
+            <div class="container">
+                <div class="lead-form-card">
+                    <div class="lead-form-sidebar">
+                        <div>
+                            <span class="section-subtitle" style="background: rgba(245, 158, 11, 0.2); color: #fef08a; border-color: rgba(245, 158, 11, 0.4);">
+                                <i class="fa-solid fa-bolt"></i> मोफत त्वरित कोटेशन
+                            </span>
+                            <h3 style="font-family: var(--font-heading); font-size: 2.1rem; font-weight: 800; line-height: 1.2; margin: 14px 0 16px 0;">
+                                आपल्या ट्रॅक्टरसाठी अवजाराचे कोटेशन मिळवा
+                            </h3>
+                            <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+                                माहिती भरा आणि एका क्लिकवर आपल्या व्हॉट्सॲपवर अधिकृत कोटेशन व किमतीचा तपशील मिळवा.
+                            </p>
+
+                            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.9rem;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+                                    <span>महाडीबीटीसाठी ग्राह्य अधिकृत कोटेशन</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+                                    <span>बँक कर्ज व फायनान्स मार्गदर्शन</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+                                    <span>मोफत शेतावर प्रात्यक्षिक व डिलिव्हरी</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.15);">
+                            <span style="font-size: 0.8rem; color: #94a3b8;">थेट मदत कक्ष:</span>
+                            <h4 style="font-size: 1.25rem; color: #ffffff; font-weight: 800; margin-top: 4px;">
+                                📞 ९५४५१६९००२ (9545169002)
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="lead-form-main">
+                        <form id="lead-quotation-form">
+                            <div class="form-row-2">
+                                <div class="form-group-item">
+                                    <label for="lead-name">शेतकऱ्याचे पूर्ण नाव *</label>
+                                    <input type="text" id="lead-name" placeholder="उदा. रमेश देशमुख" required>
+                                </div>
+                                <div class="form-group-item">
+                                    <label for="lead-phone">मोबाईल / WhatsApp नंबर *</label>
+                                    <input type="tel" id="lead-phone" placeholder="उदा. 98XXXXXXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group-item">
+                                    <label for="lead-village">गाव व तालुका *</label>
+                                    <input type="text" id="lead-village" placeholder="उदा. बंसारोळा, ता. केज" required>
+                                </div>
+                                <div class="form-group-item">
+                                    <label for="lead-tractor">तुमचा ट्रॅक्टर व HP *</label>
+                                    <input type="text" id="lead-tractor" placeholder="उदा. Swaraj 744 (48 HP) / Mahindra 575" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group-item">
+                                <label for="lead-equipment">कोणते अवजार हवे आहे? *</label>
+                                <select id="lead-equipment" required>
+                                    <option value="" disabled selected>अवजार निवडा...</option>
+                                    <option value="Shaktiman 7 Feet Rotavator (शक्तिमान ७ फूट रोटाव्हेटर)">शक्तिमान ७ फूट रोटाव्हेटर (Shaktiman Rotavator)</option>
+                                    <option value="6 Feet Multi-Speed Rotavator (६ फूट रोटाव्हेटर)">६ फूट मल्टि-स्पीड रोटाव्हेटर</option>
+                                    <option value="2-Bottom Hydraulic MB Plough (पलटी नांगर)">२-बॉटम हायड्रॉलिक रिव्हर्सिबल पलटी नांगर</option>
+                                    <option value="9-Tyne Spring Cultivator (९-फाणी कल्टिव्हेटर)">९-फाणी हेवी स्प्रिंग कल्टिव्हेटर</option>
+                                    <option value="Automatic Seed-cum-Fertilizer Drill (पेरणी यंत्र)">९-फाणी ऑटोमॅटिक पेरणी व खत यंत्र</option>
+                                    <option value="Tractor 600 Litre Boom Sprayer (स्प्रेअर पंप)">ट्रॅक्टर ६०० लिटर बूम स्प्रेअर विथ गन</option>
+                                    <option value="Multi-Crop Tractor Thresher (थ्रेशर मळणी यंत्र)">मल्टीक्रॉप ट्रॅक्टर थ्रेशर (मळणी यंत्र)</option>
+                                    <option value="5-Tonne Tipping Trolley (ट्रॅक्टर ट्रॉली)">५ टन हायड्रॉलिक टिपिंग ट्रॉली</option>
+                                    <option value="Other / इतर अवजारे">इतर अवजारे किंवा सुटे भाग</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group-item">
+                                <label for="lead-purpose">खरेदीचे स्वरूप</label>
+                                <select id="lead-purpose">
+                                    <option value="महाडीबीटी शासकीय अनुदानासाठी कोटेशन हवे आहे">महाडीबीटी शासकीय अनुदानासाठी कोटेशन हवे आहे</option>
+                                    <option value="तात्काळ रोखीने / ऑनलाईन खरेदी करायची आहे">तात्काळ रोखीने / ऑनलाईन खरेदी करायची आहे</option>
+                                    <option value="बँक कर्ज / फायनान्स कोटेशन हवे आहे">बँक कर्ज / फायनान्स कोटेशन हवे आहे</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 14px; font-size: 1.05rem; font-weight: 800; margin-top: 10px;">
+                                <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> थेट व्हॉट्सॲपवर कोटेशन मिळवा
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- FARMER REVIEWS & TESTIMONIALS -->
+        <!-- ============================================================= -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-star"></i> शेतकऱ्यांचे समाधान</span>
+                    <h2 class="section-title">परिसरातील बळीराजाचे प्रत्यक्ष अनुभव</h2>
+                    <p class="section-description">
+                        बंसारोळा, केज, अंबाजोगाई, धारूर व बीड परिसरातील शेतकऱ्यांनी कृषिमित्र ॲग्रोमधून अवजारे खरेदी करून व्यक्त केलेले मनोगत.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "कृषिमित्र ॲग्रो बंसारोळा येथून मी ७ फूट रोटाव्हेटर घेतला. स्वराज ७४४ ट्रॅक्टरवर अतिशय सहज चालतो. जमीन एकदम मऊ होते. महाडीबीटी अनुदानाचे कोटेशनही त्यांनी त्वरित दिले."
+                        </p>
+                        <div class="reviewer-meta">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Farmer Rameshwar" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5>रामेश्वर देशमुख</h5>
+                                <span>शेतकरी, बंसारोळा (ता. केज)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "२-बॉटम हायड्रॉलिक पलटी नांगर घेतला. काळ्या भारी जमिनीमध्ये खोल नांगरणी होते आणि ट्रॅक्टरवर अजिबात लोड येत नाही. ९५४५१६९००२ वर फोन केल्यावर तत्पर सेवा मिळाली."
+                        </p>
+                        <div class="reviewer-meta">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Farmer Balasaheb" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5>बाळासाहेब मुंडे</h5>
+                                <span>शेतकरी, केज (जि. बीड)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "९ फाणी पेरणी यंत्र आणि ट्रॅक्टर ६०० लिटर स्प्रेअर पंप दोन्ही एकाच ठिकाणाहून घेतले. सोयाबीन आणि हरभरा पेरणीसाठी उत्कृष्ट काम झाले. योग्य दर आणि प्रामाणिक व्यवहार!"
+                        </p>
+                        <div class="reviewer-meta">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&q=80" alt="Farmer Pandurang" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5>पांडुरंग शिंदे</h5>
+                                <span>शेतकरी, अंबाजोगाई रोड</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- CONTACT, LOCATION & STORE DETAILS -->
+        <!-- ============================================================= -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <span class="section-subtitle"><i class="fa-solid fa-map-pin"></i> दुकानाचा पत्ता व संपर्क</span>
+                        <h2 style="font-size: 2.1rem; color: var(--secondary); margin-bottom: 8px;">कृषिमित्र ॲग्रो, बंसारोळा</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                            आमच्या बंसारोळा दालनाला प्रत्यक्ष भेट देऊन अवजारांची पाहणी करा किंवा थेट फोन/व्हॉट्सॲपवरून ऑर्डर नोंदवा.
+                        </p>
+
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-info-details">
+                                    <h4>अधिकृत पत्ता (Store Address)</h4>
+                                    <p>मेन रोड, बस स्टँड जवळ, बंसारोळा, ता. केज, जि. बीड, महाराष्ट्र - ४३१५१८</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-info-details">
+                                    <h4>मोबाईल व व्हॉट्सॲप हेल्पलाईन</h4>
+                                    <a href="tel:9545169002" style="font-weight: 800; color: var(--primary); font-size: 1.15rem;">+९१ ९५४५१६९००२ (9545169002)</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="contact-info-details">
+                                    <h4>कामाची वेळ (Store Timings)</h4>
+                                    <p>सोमवार ते रविवार: सकाळी ०८:०० ते रात्री ०८:३० (रविवार पूर्णवेळ चालू)</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="fa-solid fa-truck"></i></div>
+                                <div class="contact-info-details">
+                                    <h4>डिलिव्हरी व कार्यक्षेत्र</h4>
+                                    <p>बंसारोळा, केज, अंबाजोगाई, धारूर, बीड, परळी व मराठवाड्यातील सर्व तालुके</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store Location Map Card -->
+                    <div class="map-placeholder">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <h3 style="font-size: 1.4rem; color: var(--secondary); margin-bottom: 8px;">बंसारोळा, ता. केज (जि. बीड)</h3>
+                        <p style="color: var(--text-secondary); max-width: 380px; margin-bottom: 22px;">
+                            मेन रोडवरील सुसज्ज कृषी अवजारे दालन. प्रत्यक्ष भेट देऊन अवजारांचे प्रात्यक्षिक व गुणवत्ता तपासा.
+                        </p>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                            <a href="https://maps.google.com/?q=Bansarola+Kaij+Beed" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Google Maps वर मार्ग पहा
+                            </a>
+                            <a href="https://wa.me/919545169002" target="_blank" class="btn btn-whatsapp btn-sm">
+                                <i class="fa-brands fa-whatsapp"></i> लोकेशन व्हॉट्सॲपवर मागवा
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================= -->
+    <!-- CORPORATE FOOTER -->
+    <!-- ============================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-wrapper" style="margin-bottom: 16px;">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-tractor"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3 style="color: #ffffff; font-size: 1.5rem; font-weight: 900;">कृषिमित्र ॲग्रो</h3>
+                            <span style="color: #4ade80; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;">KRUSHIMITRA AGRO BANSAROLA</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
+                        बीड व मराठवाड्यातील शेतकऱ्यांचे विश्वसनीय कृषी अवजारे केंद्र. शक्तिमान रोटाव्हेटर, पलटी नांगर, पेरणी यंत्रे, स्प्रेअर्स व महाडीबीटी शासकीय अनुदान कोटेशन तात्काळ उपलब्ध.
+                    </p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://wa.me/919545169002" class="btn btn-whatsapp btn-sm" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:9545169002" class="btn btn-secondary btn-sm" style="border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fa-solid fa-phone"></i> कॉल करा
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>प्रमुख अवजारे श्रेणी</h4>
+                    <ul class="footer-links">
+                        <li><a href="#catalog">रोटाव्हेटर (Rotary Tillers)</a></li>
+                        <li><a href="#catalog">हायड्रॉलिक पलटी नांगर (MB Ploughs)</a></li>
+                        <li><a href="#catalog">पेरणी व टोकन यंत्रे (Seed Drills)</a></li>
+                        <li><a href="#catalog">ट्रॅक्टर स्प्रेअर पंप (Sprayers)</a></li>
+                        <li><a href="#catalog">मल्टीक्रॉप थ्रेशर (Threshers)</a></li>
+                        <li><a href="#catalog">हायड्रॉलिक ट्रॉली (Tractor Trailers)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>महत्त्वाचे दुवे</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">मुख्य पान (Home)</a></li>
+                        <li><a href="#tractor-guide">ट्रॅक्टर मॅचिंग गाईड</a></li>
+                        <li><a href="#subsidy">महाडीबीटी ५०% अनुदान माहिती</a></li>
+                        <li><a href="#strengths">गुणवत्ता व तंत्रज्ञान</a></li>
+                        <li><a href="#reviews">शेतकरी अभिप्राय</a></li>
+                        <li><a href="#contact">दुकानाचा पत्ता व संपर्क</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>थेट संपर्क केंद्र</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">
+                        <strong>कृषिमित्र ॲग्रो (Krushimitra Agro)</strong><br>
+                        मेन रोड, बस स्टँड जवळ, बंसारोळा,<br>
+                        ता. केज, जि. बीड - ४३१५१८<br>
+                        📞 <strong>मोबाईल: ९५४५१६९००२</strong><br>
+                        ✉️ krushimitraagro.bansarola@gmail.com
+                    </p>
+                    <a href="tel:9545169002" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">
+                        <i class="fa-solid fa-phone"></i> ९५४५१६९००२ वर कॉल करा
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="current-year">2026</span> <strong>कृषिमित्र ॲग्रो (Krushimitra Agro), बंसारोळा, ता. केज, जि. बीड</strong>. सर्व हक्क सुरक्षित.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#subsidy">MahaDBT Govt Subsidy Partner</a>
+                    <a href="#contact">Contact: 9545169002</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================= -->
+    <!-- SLIDE-IN EQUIPMENT QUOTATION BASKET (CART DRAWER) -->
+    <!-- ============================================================= -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-tractor" style="color: #4ade80;"></i> निवडलेली अवजारे (Quote Basket)</h3>
+            <button class="close-btn" id="close-cart-btn" title="बंद करा"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="cart-type-selector">
+            <button class="order-mode-btn active" data-mode="delivery">
+                <i class="fa-solid fa-truck"></i> शेतात / गावात डिलिव्हरी
+            </button>
+            <button class="order-mode-btn" data-mode="pickup">
+                <i class="fa-solid fa-shop"></i> बंसारोळा दुकानातून पिकअप
+            </button>
+        </div>
+
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- Rendered by app.js -->
+        </div>
+
+        <div class="cart-empty-state" id="cart-empty-state">
+            <div class="cart-empty-icon" style="background: #f0fdf4; color: var(--primary);">
+                <i class="fa-solid fa-tractor"></i>
+            </div>
+            <h4 style="font-weight: 800; color: var(--secondary); margin-bottom: 6px;">कोणतेही अवजार निवडलेले नाही</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); max-width: 260px; margin-bottom: 16px;">
+                कॅटलॉगमधून आवश्यक अवजारे निवडा आणि अधिकृत कोटेशन तयार करा.
+            </p>
+            <button class="btn btn-primary btn-sm" onclick="closeCartDrawer()">
+                <i class="fa-solid fa-gear"></i> अवजारे पहा
+            </button>
+        </div>
+
+        <div class="promo-box">
+            <div class="promo-form">
+                <input type="text" id="promo-code-input" class="promo-input" placeholder="सूट कोड (उदा. KISAN5)">
+                <button type="button" class="promo-apply-btn" onclick="applyPromoCode()">लागू करा</button>
+            </div>
+            <div id="promo-msg" class="promo-applied-message" style="display: none; font-size: 0.8rem; color: var(--primary); margin-top: 6px; font-weight: 700;"></div>
+        </div>
+
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="bill-row">
+                <span>उपएकूण (Subtotal)</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <div class="bill-row" id="discount-row" style="display: none; color: #16a34a; font-weight: 700;">
+                <span>शेतकरी विशेष सूट</span>
+                <span id="cart-discount">-₹0</span>
+            </div>
+            <div class="bill-row">
+                <span>वाहतूक खर्च (Transport)</span>
+                <span id="cart-delivery-fee">₹500</span>
+            </div>
+            <div class="bill-row">
+                <span>कर (Taxes)</span>
+                <span id="cart-tax">GST Included</span>
+            </div>
+            <div class="bill-total">
+                <span>एकूण अंदाजे रक्कम</span>
+                <span id="cart-total" style="color: var(--primary);">₹0</span>
+            </div>
+
+            <button class="btn btn-primary" id="proceed-checkout-btn" style="width: 100%; padding: 14px; font-size: 1.05rem;">
+                <i class="fa-solid fa-file-invoice"></i> बुकिंग व कोटेशन पुढे करा
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- TECHNICAL SPECIFICATIONS MODAL WINDOW -->
+    <!-- ============================================================= -->
+    <div class="spec-modal-overlay" id="spec-modal">
+        <div class="spec-modal-card">
+            <div class="spec-modal-header">
+                <h3 id="spec-modal-title"><i class="fa-solid fa-screwdriver-wrench"></i> अवजार तांत्रिक तपशील</h3>
+                <button class="close-btn" id="close-spec-modal" style="color: #ffffff;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="spec-modal-body" id="spec-modal-content">
+                <!-- Injected dynamically by app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- CHECKOUT / BOOKING MODAL WINDOW -->
+    <!-- ============================================================= -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-tractor" style="color: #4ade80;"></i> अवजार बुकिंग व कोटेशन मागणी</h3>
+                <button class="close-btn" id="close-checkout-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="checkout-form" class="modal-body">
+                <div class="form-grid">
+                    <div class="form-group col-full">
+                        <label class="form-label">डिलिव्हरी पर्याय</label>
+                        <div class="form-radio-group">
+                            <label class="radio-pill selected">
+                                <input type="radio" name="checkoutOrderMode" value="delivery" checked>
+                                <i class="fa-solid fa-truck"></i> शेतात / गावात डिलिव्हरी
+                            </label>
+                            <label class="radio-pill">
+                                <input type="radio" name="checkoutOrderMode" value="pickup">
+                                <i class="fa-solid fa-shop"></i> बंसारोळा दुकानातून पिकअप
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="customer-name">शेतकऱ्याचे संपूर्ण नाव *</label>
+                        <input type="text" id="customer-name" class="form-input" placeholder="उदा. रमेश देशमुख" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="customer-phone">मोबाईल नंबर (WhatsApp) *</label>
+                        <input type="tel" id="customer-phone" class="form-input" placeholder="उदा. 98XXXXXXXX" required>
+                    </div>
+
+                    <div class="form-group col-full" id="address-group">
+                        <label class="form-label" for="customer-address">गाव, तालुका व पूर्ण पत्ता *</label>
+                        <textarea id="customer-address" class="form-textarea" rows="2" placeholder="उदा. मु. पो. जवळ, ता. केज, जि. बीड" required></textarea>
+                    </div>
+
+                    <div class="form-group col-full">
+                        <label class="form-label" for="order-notes">तुमच्याकडे कोणता ट्रॅक्टर व किती HP आहे?</label>
+                        <input type="text" id="order-notes" class="form-input" placeholder="उदा. महिंद्रा ५७५ (45 HP) किंवा स्वराज ७४४">
+                    </div>
+
+                    <div class="form-group col-full">
+                        <label class="form-label">पेमेंट / व्यवहार पर्याय</label>
+                        <div class="form-radio-group">
+                            <label class="radio-pill selected">
+                                <input type="radio" name="paymentMethod" value="Cash / Bank Transfer on Delivery" checked>
+                                <i class="fa-solid fa-handshake"></i> डिलिव्हरी वेळी पेमेंट
+                            </label>
+                            <label class="radio-pill">
+                                <input type="radio" name="paymentMethod" value="MahaDBT Subsidy / Bank Loan">
+                                <i class="fa-solid fa-building-columns"></i> शासकीय अनुदान / बँक कर्ज
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px;">
+                    <button type="button" id="whatsapp-order-btn" class="btn btn-whatsapp" style="width: 100%; padding: 14px; font-size: 1.05rem;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> थेट व्हॉट्सॲपवर पाठवा (9545169002)
+                    </button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 13px;">
+                        <i class="fa-solid fa-file-invoice"></i> अधिकृत कोटेशन पावती तयार करा
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- ORDER RECEIPT / OFFICIAL QUOTATION MODAL -->
+    <!-- ============================================================= -->
+    <div class="modal-overlay" id="receipt-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>अधिकृत बुकिंग कोटेशन पावती</h3>
+                <button class="close-btn" id="close-receipt-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body" style="text-align: center;">
+                <div style="width: 60px; height: 60px; border-radius: 50%; background: #f0fdf4; color: var(--primary); font-size: 1.8rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 style="color: var(--secondary); margin-bottom: 4px;">कोटेशन यशस्वीरित्या तयार झाले!</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    कृषिमित्र ॲग्रो, बंसारोळा (ता. केज) कडून आपल्याशी लवकरच संपर्क करण्यात येईल.
+                </p>
+
+                <!-- Detailed Receipt -->
+                <div id="receipt-details"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline btn-sm" id="print-receipt-btn">
+                    <i class="fa-solid fa-print"></i> कोटेशन प्रिंट करा (Print)
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="elements.receiptModal.classList.remove('active')">
+                    मुख्य पानावर जा
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Floating WhatsApp Quick Contact Button -->
+    <a href="https://wa.me/919545169002?text=नमस्कार%20कृषिमित्र%20ॲग्रो%20बंसारोळा,%20मला%20शेती%20अवजारांबद्दल%20माहिती%20व%20कोटेशन%20हवे%20आहे." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-widget" title="WhatsApp वर थेट संपर्क करा (9545169002)">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>व्हॉट्सॲप हेल्पलाईन</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/menu-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
