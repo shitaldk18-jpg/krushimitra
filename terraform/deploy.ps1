@@ -30,11 +30,25 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "Please run 'aws configure' and enter your AWS Access Key ID, Secret Access Key, and region (ap-south-1)." -ForegroundColor Yellow
     exit 1
 }
-Write-Host "AWS Authentication verified successfully!" -ForegroundColor Green
+$accountId = aws sts get-caller-identity --query Account --output text
+$stateBucket = "krushimitra-tfstate-$accountId"
+Write-Host "AWS Authentication verified successfully! Account ID: $accountId" -ForegroundColor Green
 
-# 4. Initialize Terraform
-Write-Host "`n[2/4] Initializing Terraform (downloading AWS provider)..." -ForegroundColor Yellow
-terraform init
+# Ensure State Bucket exists
+Write-Host "Ensuring Terraform S3 state bucket ($stateBucket)..." -ForegroundColor Yellow
+aws s3api head-bucket --bucket "$stateBucket" 2>$null
+if ($LASTEXITCODE -ne 0) {
+    aws s3api create-bucket --bucket "$stateBucket" --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+    aws s3api put-bucket-versioning --bucket "$stateBucket" --versioning-configuration Status=Enabled
+}
+
+# 4. Initialize Terraform with S3 Backend
+Write-Host "`n[2/4] Initializing Terraform with remote state..." -ForegroundColor Yellow
+terraform init `
+    -backend-config="bucket=$stateBucket" `
+    -backend-config="key=krushimitra/terraform.tfstate" `
+    -backend-config="region=ap-south-1"
+
 if ($LASTEXITCODE -ne 0) {
     Write-Host "[ERROR] Terraform init failed!" -ForegroundColor Red
     exit 1

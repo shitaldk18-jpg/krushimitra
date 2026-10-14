@@ -1,6 +1,9 @@
 terraform {
   required_version = ">= 1.3.0"
 
+  # S3 remote state configuration (populated dynamically via CLI / GitHub Actions)
+  backend "s3" {}
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"

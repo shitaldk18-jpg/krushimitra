@@ -1,0 +1,111 @@
+name: "Deploy Krushimitra Agro to AWS Free Tier"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: "Provision & Deploy (Terraform)"
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository code
+      - name: "Checkout Code"
+        uses: actions/checkout@v4
+
+      # 2. Configure AWS Credentials from GitHub Secrets
+      - name: "Configure AWS Credentials"
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "ap-south-1" # Mumbai Region (Free Tier)
+
+      # 3. Setup Terraform CLI
+      - name: "Setup Terraform"
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.0"
+
+      # 4. Bootstrap S3 Remote State Bucket (Ensures permanent state persistence across GitHub runners)
+      - name: "Bootstrap Remote State Bucket"
+        run: |
+          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+          STATE_BUCKET="krushimitra-tfstate-${ACCOUNT_ID}"
+          echo "STATE_BUCKET=${STATE_BUCKET}" >> $GITHUB_ENV
+          echo "Using Terraform state bucket: $STATE_BUCKET"
+
+          if ! aws s3api head-bucket --bucket "$STATE_BUCKET" 2>/dev/null; then
+            echo "Creating S3 bucket for Terraform state in ap-south-1..."
+            aws s3api create-bucket \
+              --bucket "$STATE_BUCKET" \
+              --region ap-south-1 \
+              --create-bucket-configuration LocationConstraint=ap-south-1
+            
+            aws s3api put-bucket-versioning \
+              --bucket "$STATE_BUCKET" \
+              --versioning-configuration Status=Enabled
+            
+            aws s3api put-public-access-block \
+              --bucket "$STATE_BUCKET" \
+              --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
+            echo "State bucket created successfully!"
+          else
+            echo "State bucket already exists."
+          fi
+
+      # 5. Initialize Terraform with S3 Backend
+      - name: "Terraform Init"
+        working-directory: terraform
+        run: |
+          terraform init \
+            -backend-config="bucket=${{ env.STATE_BUCKET }}" \
+            -backend-config="key=krushimitra/terraform.tfstate" \
+            -backend-config="region=ap-south-1"
+
+      # 6. Validate Terraform Configuration
+      - name: "Terraform Validate"
+        working-directory: terraform
+        run: terraform validate
+
+      # 7. Terraform Plan
+      - name: "Terraform Plan"
+        working-directory: terraform
+        run: terraform plan -out=tfplan
+
+      # 8. Terraform Apply (Creates S3, CloudFront & Uploads Website Files)
+      - name: "Terraform Apply"
+        working-directory: terraform
+        run: terraform apply -auto-approve tfplan
+
+      # 9. Invalidate CloudFront Cache (Ensures instant global update)
+      - name: "Invalidate CloudFront Cache"
+        working-directory: terraform
+        run: |
+          DIST_ID=$(terraform output -raw cloudfront_distribution_id)
+          echo "Invalidating CloudFront cache for: $DIST_ID"
+          aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
+
+      # 10. Display Live Website URL in GitHub Actions Summary
+      - name: "Publish Deployment Summary"
+        working-directory: terraform
+        run: |
+          SITE_URL=$(terraform output -raw website_url)
+          S3_BUCKET=$(terraform output -raw s3_bucket_name)
+          DIST_ID=$(terraform output -raw cloudfront_distribution_id)
+
+          echo "## 🚜 Krushimitra Agro - Deployment Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🌐 **Live Website URL:** [$SITE_URL]($SITE_URL)" >> $GITHUB_STEP_SUMMARY
+          echo "📦 **S3 Storage Bucket:** \`$S3_BUCKET\`" >> $GITHUB_STEP_SUMMARY
+          echo "⚡ **CloudFront CDN ID:** \`$DIST_ID\`" >> $GITHUB_STEP_SUMMARY
+          echo "📍 **AWS Region:** Mumbai (\`ap-south-1\`)" >> $GITHUB_STEP_SUMMARY
+          echo "💰 **Cost Tier:** 100% AWS Free Tier (₹0.00)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> *Note: CloudFront CDN distributions take 2-3 minutes to deploy across all global edge locations.*" >> $GITHUB_STEP_SUMMARY
