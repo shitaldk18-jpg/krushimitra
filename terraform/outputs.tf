@@ -1,16 +1,11 @@
 output "website_url" {
-  description = "Live HTTPS URL of the Krushimitra Agro website on AWS CloudFront"
-  value       = "https://${aws_cloudfront_distribution.site_distribution.domain_name}"
+  description = "Live URL of the Krushimitra Agro website on AWS S3 Static Website Hosting"
+  value       = "http://${aws_s3_bucket_website_configuration.site_web_config.website_endpoint}"
 }
 
-output "cloudfront_domain" {
-  description = "CloudFront default domain name"
-  value       = aws_cloudfront_distribution.site_distribution.domain_name
-}
-
-output "cloudfront_distribution_id" {
-  description = "CloudFront Distribution ID (used for cache invalidation)"
-  value       = aws_cloudfront_distribution.site_distribution.id
+output "website_endpoint" {
+  description = "S3 Website endpoint domain"
+  value       = aws_s3_bucket_website_configuration.site_web_config.website_endpoint
 }
 
 output "s3_bucket_name" {
@@ -27,8 +22,8 @@ output "free_tier_status" {
   description = "AWS Free Tier status breakdown"
   value = {
     s3_storage_tier         = "5 GB Free / month (Website uses < 1 MB - 0.02% of limit)"
-    cloudfront_tier         = "Always Free: 1 TB transfer/month + 10,000,000 requests/month forever"
-    ssl_certificate_tier    = "100% Free HTTPS with AWS CloudFront"
-    estimated_monthly_bill  = "₹0.00 (Completely within AWS Free Tier)"
+    data_transfer_tier      = "15 GB Free data transfer out per month"
+    verification_needed     = "No AWS Support verification required!"
+    estimated_monthly_bill  = "₹0.00 (100% within AWS Free Tier)"
   }
 }

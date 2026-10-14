@@ -79,33 +79,23 @@ jobs:
         working-directory: terraform
         run: terraform plan
 
-      # 8. Terraform Apply (Creates S3, CloudFront & Uploads Website Files)
+      # 8. Terraform Apply (Enables S3 Static Website Hosting & Uploads Files)
       - name: "Terraform Apply"
         working-directory: terraform
         run: terraform apply -auto-approve
 
-      # 9. Invalidate CloudFront Cache (Ensures instant global update)
-      - name: "Invalidate CloudFront Cache"
-        working-directory: terraform
-        run: |
-          DIST_ID=$(terraform output -raw cloudfront_distribution_id)
-          echo "Invalidating CloudFront cache for: $DIST_ID"
-          aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
-
-      # 10. Display Live Website URL in GitHub Actions Summary
+      # 9. Display Live Website URL in GitHub Actions Summary
       - name: "Publish Deployment Summary"
         working-directory: terraform
         run: |
           SITE_URL=$(terraform output -raw website_url)
           S3_BUCKET=$(terraform output -raw s3_bucket_name)
-          DIST_ID=$(terraform output -raw cloudfront_distribution_id)
 
           echo "## 🚜 Krushimitra Agro - Deployment Successful!" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "🌐 **Live Website URL:** [$SITE_URL]($SITE_URL)" >> $GITHUB_STEP_SUMMARY
           echo "📦 **S3 Storage Bucket:** \`$S3_BUCKET\`" >> $GITHUB_STEP_SUMMARY
-          echo "⚡ **CloudFront CDN ID:** \`$DIST_ID\`" >> $GITHUB_STEP_SUMMARY
           echo "📍 **AWS Region:** Mumbai (\`ap-south-1\`)" >> $GITHUB_STEP_SUMMARY
           echo "💰 **Cost Tier:** 100% AWS Free Tier (₹0.00)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "> *Note: CloudFront CDN distributions take 2-3 minutes to deploy across all global edge locations.*" >> $GITHUB_STEP_SUMMARY
+          echo "✅ *Website is live and immediately accessible via Amazon S3 Static Website Hosting!*" >> $GITHUB_STEP_SUMMARY
