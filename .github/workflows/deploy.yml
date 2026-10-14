@@ -77,12 +77,12 @@ jobs:
       # 7. Terraform Plan
       - name: "Terraform Plan"
         working-directory: terraform
-        run: terraform plan -out=tfplan
+        run: terraform plan
 
       # 8. Terraform Apply (Creates S3, CloudFront & Uploads Website Files)
       - name: "Terraform Apply"
         working-directory: terraform
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -auto-approve
 
       # 9. Invalidate CloudFront Cache (Ensures instant global update)
       - name: "Invalidate CloudFront Cache"
